@@ -1,0 +1,192 @@
+/* Reset default styles */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('resources/graphics/background.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+header {
+    background-color: #1D688D;
+    color: white;
+    text-align: center;
+    padding: 1.4rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 950px;
+    min-width: 950px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+}
+
+#search-box {
+    height: 32px;
+    width: 97%;
+    font-size: 20px;
+    padding-left: 1rem;
+}
+
+#search-results {
+    margin: 2rem;
+}
+
+/* Highlighting styles */
+#search-results em {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#result-stats {
+    border-bottom: 1px solid #E3E3E3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-pane {
+    border-right: 1px solid #E3E3E3;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    width: 30%;
+}
+
+.facet-list {
+    margin-bottom: 50px;
+}
+
+.facet-title {
+    margin-top: 0px;
+}
+
+ul {
+    padding-left: 5px;
+}
+
+.right-pane {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sorts-label {
+    padding-right: 2px;
+    cursor: default;
+}
+
+#sorts {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 0px;
+}
+
+input[type=checkbox]:checked+label {
+    background-color: #1D688D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+label {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.page-button {
+    cursor: pointer;
+    padding: 12px 20px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+.facetLabel {
+    margin-bottom: 14px;
+
+}
+
+.page-number {
+    background-color: #1D688D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    height: 20px;
+    width: 20px;
+    margin: 0px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hit {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#hit-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#hit-image {
+    border-radius: 12px;
+}
+
+#hit-name {
+    margin: 0px;
+}
+
+#hit-info {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.pagination {
+    margin: 0rem 2rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#hit-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

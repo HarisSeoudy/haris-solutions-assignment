@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Restaurant Locator - by Algolia</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import the Algolia JS Search Client via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+  <!-- Import the Algolia Helper via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch-helper@3.14.2/dist/algoliasearch.helper.min.js"></script>
+  <!-- Import jQuery via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <input type="text" autocomplete="off" placeholder="Search for resturants by name, cuisine or location"
+        id="search-box"/>
+    </header>
+    <main>
+      <div class="left-pane">
+        <div class="facet-list">
+          <h4 class="facet-title">Cuisine Type</h4>
+          <ul id=food-facet></ul>
+        </div>
+        <div class="facet-list">
+          <h4 class="facet-title">Rating</h4>
+          <ul id=star-facet></ul>
+        </div>
+        <div class="facet-list">
+          <h4 class="facet-title">Payment Options</h4>
+          <ul id=payment-facet></ul>
+        </div>
+      </div>
+      <div class="right-pane">
+        <div id="result-stats">
+          <div id="result-header"></div>
+          <div id="sorts-wrapper">
+            <label for="sorts" class="sorts-label">Sort by:</label>
+            <select name="sorts" id="sorts">
+              <option value="restaurants">Most Relevant</option>
+              <option value="restaurants_price_asc">Price (asc)</option>
+              <option value="restaurants_price_desc">Price (desc)</option>
+              <option value="restaurants_rating_desc">Best Rated</option>
+              <option value="restaurants_reviews_desc">Most Reviews</option>
+            </select>
+          </div>
+        </div>
+        <div id="search-results"></div>
+        <div class="pagination">
+          <button class="page-button" id="next-page">Next Page</button>
+          <div class="page-number"></div>
+          <button class="page-button" id="previous-page">Previous Page</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
